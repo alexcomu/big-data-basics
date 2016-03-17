@@ -21,10 +21,11 @@ Requirements:
 
 
 Example of concept:
+
 Movie data set from https://movielans.org
 From a raw dataset, **how many movies did each user seen?**
 
-If we have a list like this:
+If we have a dataset like this:
 
 | USERID | MOVIEID | Rating | Timestamp |
 | -----  | ------- | ------ | --------- |
@@ -35,15 +36,30 @@ If we have a list like this:
 |   2    |  456    |   2    |     X     |
 
 What can we do?
-Mapper: Extract and organize what we care about -> Extract for each user (Key) the film seen (Value):
+
+**Mapper**: Extract and organize what we care about -> Extract for each user (Key) the film seen (Value):
 
 	[Key1: Value | Key2: Value | ...]
 	[ 1: 123 | 2: 123 | 1: 456 | 1: 789 | 2: 789]
 
-Reducer: Aggregate by key and do something, for example len(movies):
+**Reducer**: Aggregate by key and do something, for example len(movies):
 
 	[Key1: Value1, Value2 | Key2: value1 | ….]
 	[1: 123, 456 , 789 | 2: 123, 789]
 
 	len(movies) -> [1: 3 | 2: 2]
+
+
+**How Hadoop Scales?**
+
+Actors:
+
+	- Data Source (For example Amazon s3)
+	- Several PC used as mapper
+	- Several PC used as reducer
+	- Unique result
+
+We can have different numbers of mapper and reducer, each mapper receives multiple line of data and then will send the result to a specific reducer that will handle the specific key.
+
+
 
