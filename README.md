@@ -1,6 +1,6 @@
 # big-data-basics
 
-Welcome to my introduction on Big Data Basics - MapReduce / Hadoop
+Welcome to my introduction on Big Data Basics - **MapReduce / Hadoop**
 
 Collection of theory and examples with Python.
 Requirements: 
@@ -8,12 +8,12 @@ Requirements:
 	- Python 2.7+
 	- MRJob
 
-**MapReduce**: Programming model for processing large datasets -> horizontal scaling over clusters of computers (invented by Google)
+**MapReduce**: Programming model for processing large datasets -> horizontal scaling over clusters of computers (invented by Google):
 
-     - **Mapper**:     Extract and organize information to unique keys
-     - **Reducer**:    Process all of the values for each key
+     - MAPPER :     Extract and organize information to unique keys
+     - REDUCER:     Process all of the values for each key
 
-**Hadoop**: Software than manages applications that run on a cluster
+**Hadoop**: Software than manages applications that run on a cluster:
 
      - Shared Files (HDFS)
      - Communication between computers (YARN)
@@ -34,13 +34,13 @@ If we have a list like this:
 |   1    |  789    |   2    |     X     |
 |   2    |  456    |   2    |     X     |
 
-What we can do is:
-Mapper: Extract and organize what we care about -> Extract for each user (Key) the film seen (Value)
+What can we do?
+Mapper: Extract and organize what we care about -> Extract for each user (Key) the film seen (Value):
 
 	[Key1: Value | Key2: Value | ...]
 	[ 1: 123 | 2: 123 | 1: 456 | 1: 789 | 2: 789]
 
-Reducer: Aggregate by key and do something, for example len(movies)
+Reducer: Aggregate by key and do something, for example len(movies):
 
 	[Key1: Value1, Value2 | Key2: value1 | ….]
 	[1: 123, 456 , 789 | 2: 123, 789]
