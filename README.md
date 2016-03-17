@@ -76,5 +76,15 @@ Alternative for high level scripting. Runs on top of Hadoop, allows SQL-like que
 
 **Apache's Spark**
 
-TODO
+An alternative to MapReduce, is becoming very popular. It uses Hadoop and is used by Twitter, Amazon, ...
+Includes **built-in libraries** for machine learning (MLLib), SQL, Streaming and Graph Analysis.
+
+Significantly faster than MapReduce:
+
+“Run programs up to 100x faster than Hadoop MapReduce in memory, or 10x faster on disk.” - YMMV
+
+Can be used with Scala / Java / Python / R, offers SQL queries. Works with HDFS, Cassandra, S3, Hbase, MongoDB and can Work with Elastic MapReduce.
+
+     “Is what the cool kids are using!"
+
 
