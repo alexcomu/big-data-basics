@@ -8,6 +8,8 @@ Requirements:
 	- Python 2.7+
 	- MRJob
 
+# MapReduce / Hadoop introduction
+
 **MapReduce**: Programming model for processing large datasets -> horizontal scaling over clusters of computers (invented by Google):
 
      - MAPPER :     Extract and organize information to unique keys
@@ -61,5 +63,18 @@ Actors:
 
 We can have different numbers of mapper and reducer, each mapper receives multiple line of data and then will send the result to a specific reducer that will handle the specific key.
 
+# Hadoop Solutions
 
+**Apache’s Hive**
+
+Data warehouse built on Hadoop, **SQL-like queries**, allow MapReduce, can work with Amazon EMR, initially developed by Facebook.
+
+
+**Apache's Pig**
+
+Alternative for high level scripting. Runs on top of Hadoop, allows SQL-like queries (Pig Latin). Works with Amazon EMR, involves learning another language, initially developed by Yahoo.
+
+**Apache's Spark**
+
+TODO
 
